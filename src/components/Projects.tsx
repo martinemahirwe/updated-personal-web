@@ -1,23 +1,22 @@
 import { FaArrowRight } from 'react-icons/fa';
 import { useState } from 'react';
-import ecommerceImage from '../assets/Screenshot from 2024-06-27 16-05-09.png'
 
 const projects = [
   {
     id: 1,
-    image: 'https://drive.google.com/uc?export=view&id=1E0fGA0jASL7RN4EpDTemsj-fwdL2Gt4c',
+    image: '/bag.png',
     label: 'Current Role',
     title: 'BAG - Hiring, Assessment & Onboarding Tool',
     details: 'Africa\'s leading hiring, assessment & onboarding platform. I work as a QA professional ensuring platform reliability, quality, and optimal user experience. BAG helps employers source, assess, hire and onboard top talents across Africa with comprehensive testing and quality assurance.',
     year: 2024,
     role: 'QA Specialist',
     status: 'Ongoing',
-    link: 'https://baghq.com/',
+    link: 'https://bag.work/',
     tagline: 'Africa\'s Leading Hiring, Assessment & Onboarding Tool',
   },
   {
     id: 2,
-    image: 'https://drive.google.com/uc?export=view&id=1orFl9wpkXPZr7E6jacsS3abOiAzTmxBW',
+    image: '/ikunde.png',
     label: 'Team Project',
     title: 'iKunde: Mental Health & Wellness Platform',
     details: 'A digital space for mental health care, connection, and growth powered by AI and guided by compassion. I contribute as both Full-stack Developer and QA Tester, ensuring code quality and platform reliability. iKunde bridges the gap between technology and empathy, offering inclusive tools for students, clinics, universities, and NGOs across East Africa.',
@@ -29,7 +28,7 @@ const projects = [
   },
   {
     id: 3,
-    image: `${ecommerceImage}`,
+    image: '/ecommerce-project.png',
     label: 'E-commerce Platform',
     title: 'Exclusive E-commerce Platform: A PERN Stack Implementation',
     details: 'Teamed up with a talented development team to create a cutting-edge e-commerce platform with advanced features, including a seamlessly integrated chatbot, and exceptional user experiences. Built with React, Node.js, and PostgreSQL.',
@@ -39,7 +38,7 @@ const projects = [
   },
   {
     id: 4,
-    image: 'https://drive.google.com/uc?export=view&id=1orFl9wpkXPZr7E6jacsS3abOiAzTmxBW',
+    image: '/success.png',
     label: 'Portfolio Project',
     title: 'Success Construct Portfolio',
     details: 'A professional portfolio and business website built with Next.js showcasing projects, services, and contact capabilities. Demonstrates expertise in modern web development, responsive design, and optimal user experience across all devices.',
@@ -66,8 +65,8 @@ const ProjectsSection = () => {
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 w-full lg:w-[83%] mb-12">
         <div className="relative flex justify-center items-center pt-6 md:pt-10 pb-6 md:pb-10 lg:pt-[10rem] lg:pb-[10rem] pr-4 md:pr-6 lg:pr-[5rem] pl-4 md:pl-6 lg:pl-[5rem] rounded-[0.75rem] bg-[#1c0849] h-auto lg:h-[32rem]">
-          <div className='border-[#3f3f3f]'>
-            <img src={currentProject.image} alt={currentProject.label} className="object-cover h-[12rem] sm:h-[15rem] md:h-[18rem] w-[16rem] sm:w-[20rem] md:w-[30rem] rounded-[1.5rem]" />
+          <div className='flex justify-center items-center'>
+            <img src={currentProject.image} alt={currentProject.label} crossOrigin="anonymous" onError={(e) => console.error('Image failed to load:', currentProject.image, e)} className="object-cover h-[12rem] sm:h-[15rem] md:h-[18rem] w-[16rem] sm:w-[20rem] md:w-[30rem] rounded-[1.5rem] block" />
           </div> 
           <div className="flex gap-2 absolute top-3 md:top-5 left-3 md:left-5 flex-wrap">
             <button className="bg-[#8065be] rounded-[1.5625rem] pt-[0.25rem] md:pt-[0.5rem] pb-[0.25rem] md:pb-[0.5rem] pl-4 md:pl-7 pr-4 md:pr-7 text-xs md:text-base">

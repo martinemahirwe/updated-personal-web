@@ -22,7 +22,7 @@ const Footer = () => {
 
       <div className="mt-4 flex justify-center items-center text-gray-600 text-sm md:text-base">
         <FaRegCopyright className="mr-1 flex-shrink-0" />
-        <span>2024 Martine</span>
+        <span>2026 Martine</span>
       </div>
       
       <div className="mt-4 flex justify-center items-center">
